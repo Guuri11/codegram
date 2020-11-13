@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Likes{% endblock %}
+
+{% block body %}
+    <h1>Likes</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ like.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('likes_index') }}">back to list</a>
+
+    <a href="{{ path('likes_edit', {'id': like.id}) }}">edit</a>
+
+    {{ include('likes/_delete_form.html.twig') }}
+{% endblock %}

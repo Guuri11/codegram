@@ -1,0 +1,19 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        user:
+            uri_prefix: /imgs/users
+            upload_destination: '%kernel.project_dir%/public/imgs/users'
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+        posts:
+            uri_prefix: /imgs/posts
+            upload_destination: '%kernel.project_dir%/public/imgs/posts'
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true

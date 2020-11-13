@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Following{% endblock %}
+
+{% block body %}
+    <h1>Following</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ following.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('following_index') }}">back to list</a>
+
+    <a href="{{ path('following_edit', {'id': following.id}) }}">edit</a>
+
+    {{ include('following/_delete_form.html.twig') }}
+{% endblock %}
